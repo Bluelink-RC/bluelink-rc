@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How it works — BlueLink RC</title>
+  <meta name="description" content="High-level architecture for BlueLink RC: gamepad over BLE to an on-vehicle receiver, with a companion app for setup.">
+  <meta name="theme-color" content="#0E1A2B">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img src="favicon.svg" alt="">
+        <span class="brand-name">BlueLink RC<span>Public documentation</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      <nav class="menu" id="site-menu" aria-label="Documentation">
+        <a href="index.html">Overview</a>
+        <a href="how-it-works.html" aria-current="page">How it works</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="about.html">Status &amp; boundary</a>
+      </nav>
+      <p class="sidebar-note">Documentation only. No firmware, source, or private systems are published here.</p>
+    </aside>
+    <main class="content" id="main">
+      <p class="kicker">02 / How it works</p>
+      <h1>Gamepad in, RC out.</h1>
+      <p class="lede">Two links, two jobs. The controller is the driving radio. The phone (or desktop) app is for setup.</p>
+
+      <h2>Driving</h2>
+      <p>An Xbox or Stadia controller connects to the receiver over Bluetooth Low Energy. Firmware on the board maps that input onto PWM channels that hobby servos and electronic speed controllers already understand.</p>
+      <p>If you know a conventional RC radio — sticks on the transmitter, receiver in the car — this is the same idea with a gamepad in your hands instead of a pistol or stick radio.</p>
+
+      <h2>Setup</h2>
+      <p>The companion app talks to the same receiver for:</p>
+      <ul>
+        <li>Remapping channels without flashing new firmware</li>
+        <li>Live status while you are connected</li>
+        <li>Wireless firmware updates</li>
+      </ul>
+      <div class="callout">
+        The app is not in the control loop while you drive. Lose the phone; the gamepad still drives the vehicle as long as the controller link is up.
+      </div>
+
+      <h2>What this page does not cover</h2>
+      <p>Signal processing details, wireless protocols, update internals, and board-level wiring are private. This chapter is the public picture of how the pieces fit — not a specification.</p>
+
+      <footer>
+        <p><a href="hardware.html">Next: Hardware</a> · <a href="https://github.com/Bluelink-RC/bluelink-rc">GitHub</a></p>
+      </footer>
+    </main>
+  </div>
+  <script src="site.js"></script>
+</body>
+</html>

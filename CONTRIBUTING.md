@@ -1,25 +1,29 @@
 # Contributing
 
-Thanks for looking at BlueLink RC.
+This repository is the **public documentation website** (GitHub Pages from `docs/`). It has no application source and no infrastructure.
 
-This repository is the **public overview** for the Bluelink-RC organization. Implementation (receiver firmware, Flutter companion, and related services) lives in **private** repositories for now.
+## Welcome
 
-## What is useful here
+- Typo and clarity fixes on the public pages in `docs/`
+- High-level product questions that can be answered without private detail
 
-- Documentation fixes and clarifications in this README
-- Questions about the public architecture description
-- Issues that help keep the overview honest (wrong board, outdated status, missing high-level feature)
+Open an issue or a small documentation PR.
 
-Open a GitHub issue on this repo. Small documentation PRs are welcome.
+## Out of scope
 
-## What is not in scope yet
+Do not use this repo to request or discuss:
 
-- Firmware, GATT, PWM, or mobile-app code reviews against this repo (that source is not public)
-- Expecting a public contribution path into the private implementation repos
-- Commercial support, SLAs, or a published SDK
+- Source code, firmware, protocols, or board-level detail
+- Internal repos, cloud, operations, environments, or endpoints
+- Credentials, keys, device lists, or release machinery
+- A public contribution path into private implementation
 
-If you need firmware-level detail, it is not published here on purpose.
+Those topics will be closed without comment if they would expose private systems.
+
+## Security
+
+Do not file public issues with vulnerability write-ups, exploit steps, or infrastructure detail. Contact [Lincoln Larson](https://github.com/modernn) privately.
 
 ## License
 
-See the License section in [README.md](README.md). No contribution license is in effect until a project license is chosen.
+See [README.md](README.md). No contribution license is in effect until a project license is chosen.

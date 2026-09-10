@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Status &amp; boundary — BlueLink RC</title>
+  <meta name="description" content="Project status, author, license, and the public documentation boundary for BlueLink RC.">
+  <meta name="theme-color" content="#0E1A2B">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img src="favicon.svg" alt="">
+        <span class="brand-name">BlueLink RC<span>Public documentation</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      <nav class="menu" id="site-menu" aria-label="Documentation">
+        <a href="index.html">Overview</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="about.html" aria-current="page">Status &amp; boundary</a>
+      </nav>
+      <p class="sidebar-note">Documentation only. No firmware, source, or private systems are published here.</p>
+    </aside>
+    <main class="content" id="main">
+      <p class="kicker">04 / Status</p>
+      <h1>Active, personal, not a product company.</h1>
+      <p class="lede">BlueLink RC is real hardware and software Lincoln Larson is building and using. It is not a commercial product, a supported service, or a public SDK.</p>
+
+      <h2>Author</h2>
+      <p><a href="https://github.com/modernn">Lincoln Larson</a> · GitHub org <a href="https://github.com/Bluelink-RC">Bluelink-RC</a></p>
+
+      <h2>What this website publishes</h2>
+      <ul>
+        <li>Product description and high-level architecture</li>
+        <li>Verified development board (class of hardware, not a wiring guide)</li>
+        <li>Project status and how to reach the author</li>
+      </ul>
+
+      <h2>What it does not publish</h2>
+      <div class="callout bound">
+        <p>Do not use public GitHub issues — or this site — to request:</p>
+        <ul>
+          <li>Source, firmware, protocols, pinouts, or update internals</li>
+          <li>Internal repository names, cloud or operations layout, environments, or endpoints</li>
+          <li>Credentials, keys, device inventories, or build/release machinery</li>
+        </ul>
+        <p>Those questions will not be answered in public.</p>
+      </div>
+
+      <h2>Security</h2>
+      <p>If you believe you have found a security issue, do not file a public GitHub issue with details. Contact <a href="https://github.com/modernn">Lincoln Larson</a> privately. See also <a href="https://github.com/Bluelink-RC/bluelink-rc/blob/main/SECURITY.md">SECURITY.md</a> on the repository.</p>
+
+      <h2>License</h2>
+      <p><strong>License TBD.</strong> This documentation repository has no <code>LICENSE</code> file. Until one is published, nothing here and nothing in private implementation should be treated as licensed for reuse. A permissive license (MIT or Apache-2.0) is the likely direction; that is not a grant.</p>
+
+      <h2>Source of this site</h2>
+      <p>Pages live in the public <a href="https://github.com/Bluelink-RC/bluelink-rc">bluelink-rc</a> repository. Documentation fixes that stay inside the public boundary are welcome via issue or pull request.</p>
+
+      <footer>
+        <p><a href="index.html">Back to overview</a> · <a href="https://github.com/Bluelink-RC/bluelink-rc">GitHub</a></p>
+      </footer>
+    </main>
+  </div>
+  <script src="site.js"></script>
+</body>
+</html>
