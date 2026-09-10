@@ -1,63 +1,42 @@
 # BlueLink RC
 
-**Drive RC vehicles with an Xbox or Stadia controller over Bluetooth Low Energy.**
+Public documentation website for **BlueLink RC** — drive RC vehicles with an Xbox or Stadia controller over Bluetooth Low Energy.
 
-BlueLink RC is a personal/indie project: a small on-vehicle receiver plus a companion app. A BLE gamepad is the transmitter. Firmware on the receiver turns stick and button input into standard RC outputs for servos and speed controllers. The companion app is for setup and status on the bench — it is not the driving radio.
+**Docs (canonical):** [https://bluelink-rc.github.io/bluelink-rc/](https://bluelink-rc.github.io/bluelink-rc/)
 
-This repository is the **public homepage** for [Bluelink-RC](https://github.com/Bluelink-RC). It is documentation only. It does not contain source code, firmware, schemas, credentials, or operational infrastructure.
+This GitHub repository hosts that site (`docs/`) and nothing else of substance. It is not firmware, not the app, and not a map of private systems.
 
-## How it fits together
+## On the site
 
-```mermaid
-flowchart LR
-  Pad["Xbox or Stadia controller"] -->|Bluetooth LE| Receiver["On-vehicle receiver"]
-  Phone["Companion app"] <-->|setup and status| Receiver
-  Receiver --> Out["Servos and ESCs"]
+- [Overview](https://bluelink-rc.github.io/bluelink-rc/)
+- [How it works](https://bluelink-rc.github.io/bluelink-rc/how-it-works.html)
+- [Hardware](https://bluelink-rc.github.io/bluelink-rc/hardware.html)
+- [Status & boundary](https://bluelink-rc.github.io/bluelink-rc/about.html)
+
+## Local preview
+
+```bash
+python3 -m http.server --directory docs 8080
 ```
 
-```
-  Gamepad  -- Bluetooth LE -->  Receiver  -->  Servos / ESCs
-                                    ^
-                                    |
-                              Companion app
-                           (setup and status)
-```
+Then open `http://127.0.0.1:8080`.
 
-You drive with the controller. The app is for configuration and live status, not for piloting the vehicle.
+## GitHub Pages
 
-## What exists today
-
-- Receiver firmware on ESP32-S3 that speaks BLE to Xbox and Stadia controllers and outputs PWM to RC hardware
-- Companion app (Flutter) for channel mapping, live status, and wireless firmware updates
-- Verified development board: [Seeed XIAO ESP32-S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)
-
-Firmware and app work continue in private repositories. This public repo is not a source dump and is not a map of those systems.
+The workflow in `.github/workflows/pages.yml` publishes `docs/` from `main`. If the first deploy fails, enable Pages in the repository settings (Source: **GitHub Actions**), then re-run the workflow.
 
 ## Public boundary
 
-Published here on purpose:
+Published: product description, high-level architecture, verified board class, project status.
 
-- Product description and high-level architecture (above)
-- Project status and how to reach the author
+Not published: source, protocols, pinouts, internal repository names, cloud or operations layout, credentials, or build machinery.
 
-**Not published** — and please do not ask for them in public issues:
-
-- Source, board pinouts, protocols, or update internals
-- Internal repository names, cloud or operations layout, environments, or endpoints
-- Credentials, keys, device inventories, or build/release machinery
-
-If you believe you have found a security issue, do **not** file a public GitHub issue with details. Contact the author privately (see below).
-
-## Status
-
-**Active personal/indie project.** Real hardware and software, not a commercial product, company offering, public SDK, or supported service.
+See [SECURITY.md](SECURITY.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Author
 
-[Lincoln Larson](https://github.com/modernn) · org: [Bluelink-RC](https://github.com/Bluelink-RC)
+[Lincoln Larson](https://github.com/modernn) · [Bluelink-RC](https://github.com/Bluelink-RC)
 
 ## License
 
-**License TBD.** There is no `LICENSE` file in this repository. Until one is published, nothing here (and nothing in private implementation) should be treated as licensed for reuse. A permissive license (MIT or Apache-2.0) is the likely direction; that is not a grant.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for what belongs on this public repo.
+**License TBD.** No `LICENSE` file is in this repository. Until one is published, do not treat this documentation (or private implementation) as licensed for reuse.

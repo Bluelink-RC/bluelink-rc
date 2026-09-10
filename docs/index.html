@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BlueLink RC — public documentation</title>
+  <meta name="description" content="Public documentation for BlueLink RC: drive RC vehicles with an Xbox or Stadia controller over Bluetooth Low Energy.">
+  <meta property="og:title" content="BlueLink RC">
+  <meta property="og:description" content="Drive RC vehicles with an Xbox or Stadia controller over Bluetooth Low Energy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bluelink-rc.github.io/bluelink-rc/">
+  <meta name="theme-color" content="#0E1A2B">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img src="favicon.svg" alt="">
+        <span class="brand-name">BlueLink RC<span>Public documentation</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      <nav class="menu" id="site-menu" aria-label="Documentation">
+        <a href="index.html" aria-current="page">Overview</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="hardware.html">Hardware</a>
+        <a href="about.html">Status &amp; boundary</a>
+      </nav>
+      <p class="sidebar-note">Documentation only. No firmware, source, or private systems are published here.</p>
+    </aside>
+    <main class="content" id="main">
+      <p class="kicker">01 / Overview</p>
+      <h1>Drive RC with the controller you already have.</h1>
+      <p class="lede">BlueLink RC is a personal project: an on-vehicle receiver plus a companion app. An Xbox or Stadia controller is the transmitter, over Bluetooth Low Energy.</p>
+      <div class="meta">
+        <span class="pill">Personal / indie</span>
+        <span class="pill">ESP32-S3 receiver</span>
+        <span class="pill">Flutter companion</span>
+      </div>
+
+      <p>Firmware on the receiver turns stick and button input into standard RC outputs for servos and speed controllers. The companion app is for setup and status on the bench — it is not the driving radio.</p>
+
+      <h2>On this site</h2>
+      <p>This is the public documentation website for the <a href="https://github.com/Bluelink-RC">Bluelink-RC</a> GitHub organization. It is meant for people who want the product story — including LinkedIn and hiring readers — without access to private implementation.</p>
+      <p class="toc">
+        <a href="how-it-works.html">How it works</a> ·
+        <a href="hardware.html">Hardware</a> ·
+        <a href="about.html">Status, author, and what is not published</a>
+      </p>
+
+      <h2>Signal path</h2>
+      <ol class="path">
+        <li>
+          <span class="n">01 · Transmitter</span>
+          <strong>Xbox or Stadia controller</strong>
+          <p>The radio you hold. Talks to the vehicle over Bluetooth LE.</p>
+        </li>
+        <li>
+          <span class="n">02 · Receiver</span>
+          <strong>On-vehicle firmware</strong>
+          <p>Binds to the gamepad and drives standard RC outputs.</p>
+        </li>
+        <li>
+          <span class="n">03 · Vehicle</span>
+          <strong>Servos and ESCs</strong>
+          <p>Ordinary hobby outputs. No proprietary transmitter required.</p>
+        </li>
+        <li>
+          <span class="n">04 · Setup</span>
+          <strong>Companion app</strong>
+          <p>Channel mapping, live status, and wireless firmware updates.</p>
+        </li>
+      </ol>
+      <p>You drive with the controller. The app is configuration and status, not piloting.</p>
+
+      <div class="callout bound">
+        <strong>Public boundary.</strong> Firmware, protocols, board pinouts, internal repositories, and operational systems are not documented here. See <a href="about.html">Status &amp; boundary</a>.
+      </div>
+
+      <footer>
+        <p>BlueLink RC · public documentation · <a class="gh" href="https://github.com/Bluelink-RC/bluelink-rc">GitHub</a></p>
+      </footer>
+    </main>
+  </div>
+  <script src="site.js"></script>
+</body>
+</html>

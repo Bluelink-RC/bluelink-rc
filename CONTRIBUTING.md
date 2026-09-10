@@ -1,10 +1,10 @@
 # Contributing
 
-This repository is a **public overview** only. It has no application source and no infrastructure.
+This repository is the **public documentation website** (GitHub Pages from `docs/`). It has no application source and no infrastructure.
 
 ## Welcome
 
-- Typo and clarity fixes in the public README
+- Typo and clarity fixes on the public pages in `docs/`
 - High-level product questions that can be answered without private detail
 
 Open an issue or a small documentation PR.
